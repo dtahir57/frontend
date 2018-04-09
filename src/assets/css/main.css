@@ -1,0 +1,489 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  background: #FAFAFA;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #5EB130;
+  cursor: pointer;
+}
+
+a.btn {
+  display: inline-block;
+  background: #5EB130;
+  padding: 10px;
+  color: white;
+}
+
+a.small_link {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+
+a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+hr {
+  border-bottom: 3px solid #5EB130;
+  width: 50px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.container.small {
+  max-width: 1200px;
+}
+
+.container:after {
+  clear: both;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background: #FFF;
+  color: #3C3C40;
+  font-size: 20px;
+  white-space: normal;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header .container .content {
+  padding: 35px 20px;
+  overflow: hidden;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000', GradientType=0); /* IE6-9 */
+  -webkit-transition: margin-right .5s;
+  -moz-transition: margin-right .5s;
+  -ms-transition: margin-right .5s;
+  -o-transition: margin-right .5s;
+  transition: margin-right .5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+header.open .container .content {
+  margin-right: 300px;
+}
+
+header .logo, header nav {
+  height: 50px;
+}
+
+header .logo {
+  float: left;
+}
+
+header svg, header iron-icon[icon='feedrop-logo'] {
+  height: 40px;
+  margin: 5px 0;
+  width: auto;
+}
+
+header .logo svg .st0 {
+  fill: #FFF;
+}
+
+header .logo svg .st1 {
+  fill: #C6C6C6;
+}
+
+club-panel > header {
+  position: static;
+  background: none;
+}
+
+header.fixed, header.fixed .container .content, club-panel > header, club-panel > header .container .content {
+  background: #FFF;
+}
+
+club-panel > header {
+  position: static;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+club-panel > header .container {
+  overflow: hidden;
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  animation-name: slide-in-header;
+  animation-duration: .5s;
+}
+
+header.fixed nav ul li a, club-panel > header nav ul li a {
+  color: #3C3C40;
+}
+
+header.fixed .logo svg .st0, club-panel > header .logo svg .st0 {
+  fill: #5EB130;
+}
+
+header.fixed .logo svg .st1, club-panel > header .logo svg .st1 {
+  fill: #597A3D;
+}
+
+header .logo a {
+  display: block;
+}
+
+header nav {
+  float: right;
+}
+
+header nav #menu-icon {
+  display: none;
+  margin: 0;
+}
+
+header ul .language, header #menu-icon {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  overflow: hidden;
+}
+
+header nav ul li {
+  display: block;
+  float: left;
+  list-style: none;
+}
+
+header nav > ul > li > a, header nav > navigation-view > ul > li > a {
+  display: block;
+  line-height: 40px;
+  color: #FFF;
+  padding: 5px 20px;
+}
+
+header nav > navigation-view > ul > li > a {
+  color: #3c3c3c;
+}
+
+header nav ul li.highlight a {
+  color: #FFF;
+  background: #5EB130;
+}
+
+header ul .language i, header #menu-icon i {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  color: #FFF;
+}
+
+header.fixed .language i, header .language:hover i, header.fixed #menu-icon i, header #menu-icon:hover i {
+  color: #5EB130;
+  background: #FFF;
+}
+
+header .language .dropdown {
+  display: none;
+  position: absolute;
+  background: #FFF;
+  width: 50px;
+}
+
+header .language .dropdown a {
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+header .language .dropdown a.active {
+  color: #5EB130;
+}
+
+header .language:hover .dropdown {
+  display: block;
+}
+
+#sec-intro {
+  position: relative;
+  min-height: 400px;
+  height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  -webkit-transition: padding .5s;
+  -moz-transition: padding .5s;
+  -ms-transition: padding .5s;
+  -o-transition: padding .5s;
+  transition: padding .5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+#sec-intro.open {
+  padding-right: 300px;
+}
+
+#sec-intro .content {
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#sec-intro .dimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+0,0+82,0+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000', GradientType=1); /* IE6-9 */
+}
+
+#sec-intro .header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 600px;
+  color: #FFF;
+  margin: 100px;
+}
+
+#sec-intro .header h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+#sec-intro .header h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#sec-intro .header hr {
+  border-color: #ffffff;
+}
+
+#sec-intro #scroll-down {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 25px);
+  text-align: center;
+  margin-bottom: 20px;
+  animation: mover 1s infinite alternate ease-in-out;
+}
+
+#sec-intro #scroll-down i.material-icons {
+  color: #FFF;
+  font-size: 48px;
+  line-height: 50px;
+}
+
+#actionElement {
+  height: 100vh;
+  padding-top: 200px;
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header.open .container .content {
+    margin-right: 280px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #sec-intro .header {
+    margin: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  hr {
+    margin-bottom: 10px;
+  }
+
+  header {
+    top: 10px;
+  }
+
+  header:after {
+    height: 18px;
+    top: 3px;
+    left: -26px;
+    font-size: 10px;
+    line-height: 19px;
+  }
+
+  header .container .content {
+    padding: 10px;
+  }
+
+  header .logo, header nav {
+    height: 50px;
+  }
+
+  header svg, header iron-icon[icon='feedrop-logo'] {
+    height: 25px;
+    margin-top: 12px;
+  }
+
+  header nav #menu-icon {
+    display: block;
+  }
+
+  header nav ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #FFF;
+    margin: -10px 0 0;
+  }
+
+  header nav ul li {
+    float: none;
+  }
+
+  header nav:hover ul {
+    display: block;
+    padding: 10px;
+  }
+
+  header nav:hover ul li a {
+    color: #5EB130;
+    text-align: center;
+  }
+
+  header nav:hover ul li.highlight a {
+    color: #FFF;
+  }
+
+  header nav ul .language, header .language .dropdown {
+    width: auto;
+  }
+
+  header nav ul .language i {
+    display: none;
+  }
+
+  header .language .dropdown {
+    display: block;
+  }
+
+  header .language .dropdown a {
+    float: left;
+    padding-right: 10px;
+    border-right: 2px solid #3C3C40;
+    margin-right: 10px;
+    margin-top: 15px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  header .language .dropdown a:last-child {
+    border-right: 0;
+    margin-right: 0;
+  }
+
+  #sec-intro {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #sec-intro .header {
+    margin: 10px 10px 50px;
+    max-width: 300px;
+  }
+
+  #sec-intro .header h1 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 10px
+  }
+
+  #sec-intro .header h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #sec-intro #scroll-down {
+    margin: 0;
+  }
+}
